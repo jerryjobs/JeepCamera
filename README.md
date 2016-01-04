@@ -5,7 +5,7 @@ android library for take a photograph or choose a picture.
 
 #### Use
 
-    // isSelect   if true : choose a picture in system. else take a new photo ...
+    // isSelect   if true : choose a picture in gallery. else take a new photo ...
     BasePhotoActivity.tackPhoto(context, isSelect);
 
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
