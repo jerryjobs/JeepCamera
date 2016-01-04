@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">Camera</string>
+  <string name="action_settings">Settings</string>
+  <string name="take">拍一张</string>
+  <string name="choose">选一张</string>
+</resources>

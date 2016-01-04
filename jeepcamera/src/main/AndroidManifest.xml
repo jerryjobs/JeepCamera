@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.jerry.android.jeepcamera"
+    >
+
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <application
+      android:allowBackup="true"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      >
+
+    <activity
+        android:name=".BasePhotoActivity"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        />
+
+    <activity
+        android:name=".ConfirmImageActivity"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        />
+
+  </application>
+
+</manifest>
