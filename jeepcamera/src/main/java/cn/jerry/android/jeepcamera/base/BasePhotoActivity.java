@@ -1,7 +1,7 @@
 /**
  * Copyright 2012 Easy Read Tech. All rights reserved.
  */
-package cn.jerry.android.jeepcamera;
+package cn.jerry.android.jeepcamera.base;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -14,6 +14,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import cn.jerry.android.jeepcamera.LoadingProgressDialog;
+import cn.jerry.android.jeepcamera.R;
 import cn.jerry.android.jeepcamera.config.Config;
 import java.io.File;
 import java.io.FileNotFoundException;
