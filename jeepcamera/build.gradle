@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "0.1"
+version = "0.2"
 group = "cn.jerry.android"
 def siteUrl = 'https://github.com/jerryjobs/JeepCamera'
 def gitUrl = 'git@github.com:jerryjobs/JeepCamera.git'
@@ -10,6 +10,7 @@ def gitUrl = 'git@github.com:jerryjobs/JeepCamera.git'
 android {
   compileSdkVersion 23
   buildToolsVersion "23.0.2"
+  resourcePrefix 'jeep_'
 
   defaultConfig {
     minSdkVersion 14

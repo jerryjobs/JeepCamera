@@ -207,7 +207,7 @@ public class BasePhotoActivity extends Activity {
     @Override protected void onPreExecute() {
       super.onPreExecute();
       dlg = new LoadingProgressDialog(BasePhotoActivity.this);
-      dlg.setMessage(R.string.wait_loading);
+      dlg.setMessage(R.string.jeep_wait_loading);
       dlg.show();
     }
 

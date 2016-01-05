@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     photo.setOnClickListener(this);
     choose.setOnClickListener(this);
+
+    getString(R.string.jeep_app_name);
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {

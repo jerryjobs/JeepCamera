@@ -17,8 +17,8 @@ public class LoadingProgressDialog {
     progressDialog = new ProgressDialog(context);
     progressDialog.setProgressStyle(R.style.AlertDialog_AppCompat_Light);
     progressDialog.setProgressDrawable(
-        context.getResources().getDrawable(R.drawable.progress_circle_shape));
-    progressDialog.setMessage(context.getResources().getString(R.string.wait_loading));
+        context.getResources().getDrawable(R.drawable.jeep_progress_circle_shape));
+    progressDialog.setMessage(context.getResources().getString(R.string.jeep_wait_loading));
     progressDialog.setCancelable(false);
   }
 

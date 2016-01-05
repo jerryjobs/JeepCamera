@@ -33,7 +33,7 @@ public class ConfirmImageActivity extends Activity implements View.OnClickListen
     cropToPath = Config.getInstance().picDir() + "/" + System.currentTimeMillis() + ".jpg";
 
     filePath = getIntent().getStringExtra("file");
-    setContentView(R.layout.activity_base_photo);
+    setContentView(R.layout.jeep_activity_base_photo);
 
     ImageView image = (ImageView) findViewById(R.id.showPhoto);
 

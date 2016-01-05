@@ -14,7 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/crop_image_bg"
+        android:background="@drawable/jeep_crop_image_bg"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
@@ -25,7 +25,7 @@
             android:onClick="onClicked"
             android:background="@android:color/transparent"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/crop_image_cancel" 
+            android:src="@drawable/jeep_crop_image_cancel"
             android:layout_weight="1"/>
         
         <ImageButton
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:onClick="onClicked"
             android:background="@android:color/transparent"
-            android:src="@drawable/crop_image_crop"
+            android:src="@drawable/jeep_crop_image_crop"
             android:layout_weight="1"/>
         
         <ImageButton
@@ -44,7 +44,7 @@
             android:onClick="onClicked"
             android:background="@android:color/transparent"
             android:layout_marginRight="20dp"
-            android:src="@drawable/crop_image_ok" 
+            android:src="@drawable/jeep_crop_image_ok"
             android:layout_weight="1"/>
 
     </LinearLayout>

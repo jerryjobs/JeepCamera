@@ -1,6 +1,5 @@
 <resources>
-  <string name="app_name">JeepCamera</string>
-  <string name="wait_loading">加载中</string>
-  <string name="take_photo">拍照</string>
-  <string name="tack_a_picture">拍照</string>
+  <string name="jeep_app_name">JeepCamera</string>
+  <string name="jeep_wait_loading">loading</string>
+  <string name="jeep_take_a_photo">take a photo</string>
 </resources>

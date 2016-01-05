@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="jeep_app_name">Jeep相机</string>
+  <string name="jeep_wait_loading">加载中</string>
+  <string name="jeep_take_a_photo">拍照</string>
+</resources>
