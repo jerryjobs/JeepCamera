@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
-import cn.jerry.android.jeepcamera.BasePhotoActivity;
+import cn.jerry.android.jeepcamera.base.BasePhotoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
