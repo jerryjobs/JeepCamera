@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import cn.jerry.android.jeepcamera.base.BasePhotoActivity;
+import cn.jerry.android.jeepcamera.gallery.GalleryPhotoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     photo.setOnClickListener(this);
     choose.setOnClickListener(this);
+    findViewById(R.id.button3).setOnClickListener(this);
 
     getString(R.string.jeep_app_name);
   }
@@ -58,7 +60,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   @Override public void onClick(View v) {
-    BasePhotoActivity.tackPhoto(this, v.getId() == R.id.button2);
+    //if (v.getId() == R.id.button || v.getId() == R.id.button2) {
+    //  BasePhotoActivity.tackPhoto(this, v.getId() == R.id.button2);
+    //} else if (v.getId() == R.id.button3) {
+    //
+    //}
+
+    switch (v.getId()) {
+      case R.id.button:
+      case R.id.button2:
+        BasePhotoActivity.tackPhoto(this, v.getId() == R.id.button2);
+        break;
+
+      case R.id.button3:
+      {
+        Intent intent = new Intent(this, GalleryPhotoActivity.class);
+        startActivity(intent);
+      }
+        break;
+
+      default:break;
+    }
   }
 
   @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {

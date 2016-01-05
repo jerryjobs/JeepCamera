@@ -12,13 +12,19 @@
       >
 
     <activity
-        android:name=".BasePhotoActivity"
+        android:name=".base.BasePhotoActivity"
         android:windowSoftInputMode="stateAlwaysHidden"
         android:configChanges="keyboardHidden|orientation|screenSize"
         />
 
     <activity
-        android:name=".ConfirmImageActivity"
+        android:name=".base.ConfirmImageActivity"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        />
+
+    <activity android:name=".gallery.GalleryPhotoActivity"
         android:windowSoftInputMode="stateAlwaysHidden"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
