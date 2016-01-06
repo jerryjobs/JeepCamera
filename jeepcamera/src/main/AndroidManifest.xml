@@ -28,6 +28,7 @@
         android:windowSoftInputMode="stateAlwaysHidden"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:theme="@style/jeep_AppTheme.NoActionBar"
         />
 
   </application>

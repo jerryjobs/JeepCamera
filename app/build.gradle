@@ -10,6 +10,7 @@ android {
     targetSdkVersion 23
     versionCode 1
     versionName "1.0"
+    //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -17,7 +18,13 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  packagingOptions {
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'LICENSE.txt'
+  }
 }
+
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -25,4 +32,10 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.1.1'
   compile 'com.android.support:design:23.1.1'
   compile project(':jeepcamera')
+
+//  androidTestCompile 'com.android.support.test:runner:0.3'
+//  androidTestCompile 'com.android.support.test:rules:0.3'
+//  androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+//  androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2'
+  androidTestCompile 'junit:junit:4.12'
 }
