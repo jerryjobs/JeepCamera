@@ -14,10 +14,20 @@
       app:popupTheme="@style/jeep_AppTheme.AppBarOverlay"
       />
 
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/listView"
+  <FrameLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      />
+      >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+      <android.opengl.GLSurfaceView
+          android:layout_width="300dp"
+          android:layout_height="300dp"
+          />
+  </FrameLayout>
 
 </LinearLayout>
