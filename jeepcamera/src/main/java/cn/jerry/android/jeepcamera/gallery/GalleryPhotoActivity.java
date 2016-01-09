@@ -154,6 +154,8 @@ public class GalleryPhotoActivity extends AppCompatActivity {
     manager.openCamera(camera[0], new CameraDevice.StateCallback() {
       @Override public void onOpened(CameraDevice camera) {
         device = camera;
+
+
       }
 
       @Override public void onDisconnected(CameraDevice camera) {
@@ -164,7 +166,7 @@ public class GalleryPhotoActivity extends AppCompatActivity {
         camera.close();
         Log.e(TAG, "error code is : [" + error + "], when we open the camera.");
       }
-    }, new CameraHandler());
+    }, null);
   }
 
 
