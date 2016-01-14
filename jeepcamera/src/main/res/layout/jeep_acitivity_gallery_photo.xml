@@ -24,10 +24,10 @@
         android:layout_height="match_parent"
         />
 
-      <android.opengl.GLSurfaceView
+      <TextureView
+          android:id="@+id/textureView"
           android:layout_width="300dp"
-          android:layout_height="300dp"
-          />
+          android:layout_height="300dp" />
   </FrameLayout>
 
 </LinearLayout>

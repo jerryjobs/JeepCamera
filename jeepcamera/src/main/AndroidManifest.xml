@@ -1,37 +1,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.jerry.android.jeepcamera"
-    >
+    package="cn.jerry.android.jeepcamera">
 
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-  <application
-      android:allowBackup="true"
-      android:label="@string/jeep_app_name"
-      android:supportsRtl="true"
-      >
+    <permission android:name="android.permission.CAMERA" />
 
-    <activity
-        android:name=".base.BasePhotoActivity"
-        android:windowSoftInputMode="stateAlwaysHidden"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <activity
-        android:name=".base.ConfirmImageActivity"
-        android:windowSoftInputMode="stateAlwaysHidden"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        />
+    <application
+        android:allowBackup="true"
+        android:label="@string/jeep_app_name"
+        android:supportsRtl="true">
 
-    <activity android:name=".gallery.GalleryPhotoActivity"
-        android:windowSoftInputMode="stateAlwaysHidden"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:theme="@style/jeep_AppTheme.NoActionBar"
-        />
+        <activity
+            android:name=".base.BasePhotoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
-  </application>
+        <activity
+            android:name=".base.ConfirmImageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".gallery.GalleryPhotoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/jeep_AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+    </application>
 
 </manifest>
