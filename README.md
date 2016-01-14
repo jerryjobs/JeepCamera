@@ -1,9 +1,35 @@
 # JeepCamera
+===
 
 android library for take a photograph or choose a picture.
 
+#### preview
 
-#### Use
+![Preview a](images/a.png)
+
+![Preview b](images/b.png)
+
+#### how to install
+
+```
+	// gradle :
+	
+	compile('cn.jerry.android:jeepcamera:${lastVersion}@aar')
+	
+	
+	// maven :
+	<dependency>
+		<groupId>cn.jerry.android</groupId>
+		<artifactId>jeepcamera</artifactId>
+		<version>${lastVersion}</version>
+		<type>jar</type>
+		<classifier>javadoc</classifier>
+	</dependency>
+```
+
+#### how to use
+
+```
 
     // isSelect   if true : choose a picture in gallery. else take a new photo ...
     BasePhotoActivity.tackPhoto(context, isSelect);
@@ -35,3 +61,4 @@ android library for take a photograph or choose a picture.
       ImageView imageView = (ImageView) findViewById(R.id.imageView);
             imageView.setImageURI(uri);
     }
+```
