@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import cn.jerry.android.jeepcamera.base.BasePhotoActivity;
+import cn.jerry.android.jeepcamera.config.Config;
 import cn.jerry.android.jeepcamera.gallery.GalleryPhotoActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.button3:
       {
         Intent intent = new Intent(this, GalleryPhotoActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, Config.REQUEST_CODE_SELECT);
       }
         break;
 

@@ -7,6 +7,8 @@ import java.io.File;
  */
 public class Config {
 
+  public static final int REQUEST_CODE_SELECT = 13;
+
   private static final String APP_BASE_DIR = "/sdcard/.jeepCamera";
 
   private static Config config;

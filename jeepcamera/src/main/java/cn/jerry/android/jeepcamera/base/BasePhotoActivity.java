@@ -39,7 +39,7 @@ public class BasePhotoActivity extends Activity {
   /**
    * 选择照片
    */
-  public static final int RESQUEST_SELECT_PHOTO = 14;
+  public static final int REQUEST_SELECT_PHOTO = 14;
   private static final String TAG = "BasePhotoActivity";
   /**
    * 临时存储位置
@@ -89,7 +89,7 @@ public class BasePhotoActivity extends Activity {
     if (chosePhoto) {
       Intent intentFromGallery = new Intent(Intent.ACTION_PICK);
       intentFromGallery.setType("image/*");
-      startActivityForResult(intentFromGallery, RESQUEST_SELECT_PHOTO);
+      startActivityForResult(intentFromGallery, REQUEST_SELECT_PHOTO);
     } else {
       if (tempPicPath == null) {
         takePhoto();
@@ -132,7 +132,7 @@ public class BasePhotoActivity extends Activity {
         }
         break;
 
-      case RESQUEST_SELECT_PHOTO:
+      case REQUEST_SELECT_PHOTO:
         if (data == null) {
           setResult(RESULT_CANCELED);
           finish();

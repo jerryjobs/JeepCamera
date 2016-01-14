@@ -1,5 +1,6 @@
 package cn.jerry.android.jeepcamera.gallery;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -21,11 +23,12 @@ import java.util.List;
 import java.util.Set;
 
 import cn.jerry.android.jeepcamera.R;
+import cn.jerry.android.jeepcamera.config.Config;
 
 /**
  * Created by JieGuo on 16/1/5.
  */
-public class GalleryPhotoActivity extends AppCompatActivity {
+public class GalleryPhotoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "GalleryPhotoActivity";
     private RecyclerView recyclerView;
@@ -49,6 +52,22 @@ public class GalleryPhotoActivity extends AppCompatActivity {
         loadPhotos();
     }
 
+
+    @Override
+    public void onClick(View v) {
+        String path = (String) v.getTag();
+        Intent intent = new Intent();
+        intent.setData(Uri.parse("file:///" + path));
+        setResult(Config.REQUEST_CODE_SELECT, intent);
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handlerThread.quit();
+    }
+
     private void loadPhotos() {
         handlerThread = new HandlerThread("LoadImage");
         handlerThread.start();
@@ -64,6 +83,8 @@ public class GalleryPhotoActivity extends AppCompatActivity {
                     }
                     adapter.addData(paths);
                     adapter.notifyDataSetChanged();
+
+                    handlerThread.quit();
                 }
                 return true;
             }
@@ -81,6 +102,7 @@ public class GalleryPhotoActivity extends AppCompatActivity {
     private void initRecyclerView() {
 
         adapter = new GalleryAdapter();
+        adapter.setOnClickListener(this);
         recyclerView = (RecyclerView) findViewById(R.id.listView);
         recyclerView.setLayoutManager(getLayoutManager());
         recyclerView.setAdapter(adapter);
@@ -126,4 +148,5 @@ public class GalleryPhotoActivity extends AppCompatActivity {
             }
         }
     }
+
 }

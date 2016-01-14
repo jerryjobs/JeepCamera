@@ -1,4 +1,4 @@
-package cn.jerry.android.jeepcamera.Util;
+package cn.jerry.android.jeepcamera.util;
 
 import android.widget.ImageView;
 

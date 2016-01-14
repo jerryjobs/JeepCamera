@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.jerry.android.jeepcamera.R;
-import cn.jerry.android.jeepcamera.Util.Util;
+import cn.jerry.android.jeepcamera.util.Util;
 
 /**
  * Created by JieGuo on 1/5/16.
@@ -19,10 +19,15 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
     private int contentWidth = 0;
     private int itemWidth = 0;
     private List<String> data = new ArrayList<>();
+    private View.OnClickListener onClickListener;
 
     public void addData(List<String> data) {
         this.data.clear();
         this.data.addAll(data);
+    }
+
+    public void setOnClickListener(View.OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
     }
 
     @Override
@@ -35,15 +40,16 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
             contentWidth = parent.getMeasuredWidth();
             itemWidth = contentWidth / 3;
         }
-
+        if (onClickListener != null) {
+            itemView.setOnClickListener(onClickListener);
+        }
         return new GalleryViewHolder(itemView, itemWidth);
     }
 
     @Override
     public void onBindViewHolder(GalleryViewHolder holder, int position) {
-
+        holder.itemView.setTag(data.get(position));
         Util.displayImage(holder.cover, "file:///" + data.get(position), itemWidth, itemWidth);
-
     }
 
     @Override
